@@ -1,0 +1,17 @@
+{
+  "name": "zoo-project-angular",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Emily Wells Jimenez <emwellspdx@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/emilyjimenez/Zoo-Project-Angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
