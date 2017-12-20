@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
 import { FormsModule }  from '@angular/forms';
 import { BeastListComponent } from './beast-list.component';
+import { EditBeastComponent } from './edit-beast.component';
+import { NewBeastComponent } from './new-beast.component';
 
 @NgModule({
   imports: [ BrowserModule,
                   FormsModule],
   declarations: [ AppComponent,
-                  BeastListComponent],
+                  BeastListComponent,
+                  EditBeastComponent,
+                  NewBeastComponent],
   bootstrap:    [ AppComponent ]
 })
 

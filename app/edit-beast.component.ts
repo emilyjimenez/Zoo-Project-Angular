@@ -4,31 +4,35 @@ import { Beast } from './beast.model';
 @Component ({
   selector: 'edit-beast',
   template: `
-  <div *ngIf="childSelectedBeast">
-  <h4>Edit {{childSelectedBeast.species}}</h4>
-  <label>Name: {{childSelectedBeast.name}}</label>
-  <input [(ngModel)]={{childSelectedBeast.name}}>
-  <label>Age: {{childSelectedBeast.age}}</label>
-  <input [(ngModel)]={{childSelectedBeast.age}}>
-  <label>Diet: {{childSelectedBeast.diet}}</label>
-  <input [(ngModel)]={{childSelectedBeast.diet}}>
-  <label>Location: {{childSelectedBeast.location}}</label>
-  <input [(ngModel)]={{childSelectedBeast.location}}>
-  <label>Caretakers: {{childSelectedBeast.caretakers}}</label>
-  <input [(ngModel)]={{childSelectedBeast.caretakers}}>
-  <label>Sex: {{childSelectedBeast.sex}}</label>
-  <input [(ngModel)]={{childSelectedBeast.sex}}>
-  <label>Likes: {{childSelectedBeast.likes}}</label>
-  <input [(ngModel)]={{childSelectedBeast.likes}}>
-  <label>Dislikes: {{childSelectedBeast.dislikes}}</label>
-  <input [(ngModel)]={{childSelectedBeast.dislikes}}>
-  <button (click)="doneButtonClicked()">Done</button>
+  <div class="beast-edit" *ngIf="childSelectedBeast">
+    <h4>Edit <span class="species">{{childSelectedBeast.species}}</span></h4>
+    <label>Name:</label>
+    <input [(ngModel)]="childSelectedBeast.name">
+    <label>Age:</label>
+    <input [(ngModel)]="childSelectedBeast.age">
+    <label>Diet:</label>
+    <input [(ngModel)]="childSelectedBeast.diet">
+    <label>Location: </label>
+    <input [(ngModel)]="childSelectedBeast.location">
+    <label>Caretakers: </label>
+    <input [(ngModel)]="childSelectedBeast.caretakers">
+    <label>Sex: </label>
+    <input [(ngModel)]="childSelectedBeast.sex">
+    <label>Likes:</label>
+    <input [(ngModel)]="childSelectedBeast.likes">
+    <label>Dislikes:</label>
+    <input [(ngModel)]="childSelectedBeast.dislikes">
+    <button (click)="doneButtonClicked()">Done</button>
+  </div>
   `
 })
 
-export class BeastListComponent {
+export class EditBeastComponent {
   @Input() childSelectedBeast: Beast;
   @Output() doneButtonClickedSender = new EventEmitter();
 
+  doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
 
  }

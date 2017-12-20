@@ -1,6 +1,6 @@
-# _Better Doctor Lookup_
+# _Zoo Project With Angular_
 
-## _Independent Project - Epicodus JS Week 2_
+## _Independent Project - Epicodus JS Week 3_
 
 #### By _Emily Wells Jiménez_
 

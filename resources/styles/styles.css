@@ -1,0 +1,16 @@
+.beast-container {
+  display: flex;
+}
+
+.beast-object {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 5px;
+  width: 300px;
+  border: 2px double green;
+}
+
+.species {
+  color: green;
+  font-weight: bold;
+}
