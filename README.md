@@ -29,7 +29,7 @@ _stuff._
 
 ## Known Bugs
 
-_If there are duplicate practice addresses in the API call, all duplicates will be displayed._
+_NA_
 
 ## Technologies Used
 
@@ -42,7 +42,6 @@ _If there are duplicate practice addresses in the API call, all duplicates will 
 * Angular
 * TypeScript
 * Google Chrome
-* Postman
 
 ### License
 
