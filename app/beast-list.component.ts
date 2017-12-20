@@ -13,10 +13,7 @@ import { Beast } from './beast.model';
   <div class="beast-container">
       <div class="beast-object" *ngFor="let currentBeast of childBeastList | displayness:filterByDisplayness">
         <ul class="list-unstyled">
-          <li><h4><span class="species">Species Type:</span></h4> <h4>{{currentBeast.species}}</h4>
-          <input *ngIf="currentBeast.onDisplay === true" type="checkbox" checked (click)="toggleOnDisplay(currentBeast, true)"/>
-          <input *ngIf="currentBeast.onDisplay === false" type="checkbox" (click)="toggleOnDisplay(currentBeast, false)"/> <i>Check if on display</i>
-          </li>
+          <li><h4><span class="species">Species Type:</span></h4> <h4>{{currentBeast.species}}</h4></li>
             <ul>
               <li>Name: {{currentBeast.name}}</li>
               <li>Age: {{currentBeast.age}}</li>
@@ -26,6 +23,10 @@ import { Beast } from './beast.model';
               <li>Sex: {{currentBeast.sex}}</li>
               <li>Likes: {{currentBeast.likes}}</li>
               <li>Dislikes: {{currentBeast.dislikes}}</li>
+              <br>
+              <input type="checkbox" #beastOnDisplay [checked]="currentBeast.onDisplay" (click)="toggleOnDisplay(currentBeast)"> <i>Check if on display</i>
+              <br>
+              <br>
               <button (click)="editButtonHasBeenClicked(currentBeast)">Edit</button>
             </ul>
         </ul>
@@ -48,7 +49,8 @@ export class BeastListComponent {
     this.filterByDisplayness = filterOption;
   }
 
-  toggleOnDisplay(clickedBeast: Beast, setDisplayness: boolean) {
-  clickedBeast.onDisplay = setDisplayness;
+  toggleOnDisplay(clickedBeast: Beast) {
+
+  clickedBeast.onDisplay = !clickedBeast.onDisplay;
 }
  }
