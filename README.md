@@ -15,8 +15,7 @@ _Web app using Angular 2 and TypeScript. This project's prompt was to make a Zoo
 
 | Behavior  |  Input | Output  |
 |---|---|---|
-| It will  display a list of beasts | beast list is loaded on main index page  | ex: Species Type: Moblin, Name: Bubs, Age: 15, Diet: Carnivore
-Location: Hyrule Fields, Caretakers: 2, Sex: Male, Likes: Lamb shank, Dislikes: Link  |
+| It will  display a list of beasts | beast list is loaded on main index page  | ex: Species Type: Moblin, Name: Bubs, Age: 15, Diet: Carnivore, Location: Hyrule Fields, Caretakers: 2, Sex: Male, Likes: Lamb shank, Dislikes: Link  |
 | It will allow the user to edit beast info | user clicks edit button | form appears to edit beast details, when user clicks done edit form disappears |
 | It will allow a user to add a new beast | add form located on bottom of page, user fills form | once user presses add, beast is saved to database and is displayed on page |
 | It will allow user to filter beasts by ones on display and ones not on display, user can change this detail by simply clicking a checkbox | from the select list on main page, user selects Not on Display | beast list will update and only show beasts not on display (ones with unchecked boxes) |
